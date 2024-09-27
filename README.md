@@ -4,6 +4,8 @@ Before each run, please make sure to source `0_env.sh`.
 
 We use llvm @ `6c59f0e1b0fb56c909ad7c9aad4bde37dc006ae0`
 
+Fetch the submodules by `git submodule update --init`
+
 ## Compile LLVM and MLIR Libraries
 
 Before compiling LLVM, the project structure is as follows.
@@ -46,6 +48,6 @@ Go into `mlir` directory, run
 
 ```sh
 mkdir build && cd build
-cmake -G Ninja .. -DMLIR_DIR=$LLVM_INSTALL_PREFIX/lib/cmake/mlir -DLLVM_EXTERNAL_LIT=$LLVM_BUILD_DIR/bin/llvm-lit -DLLVM_PROJECT_SOURCE_DIR=$LLVM_PROJECT_SOURCE_DIR -DMLIR_ENABLE_BINDINGS_PYTHON=1
-cmake --build . --target check-fiona
+cmake -G Ninja .. -DMLIR_DIR=$LLVM_INSTALL_PREFIX/lib/cmake/mlir -DLLVM_PROJECT_SOURCE_DIR=$LLVM_PROJECT_SOURCE_DIR 
+cmake --build . 
 ```
