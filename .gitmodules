@@ -1,0 +1,6 @@
+[submodule "llvm/llvm-project"]
+	path = llvm/llvm-project
+	url = git@github.com:llvm/llvm-project.git
+[submodule "mlir"]
+	path = mlir
+	url = git@github.com:Bohan-Hu/pcc-mlir.git
